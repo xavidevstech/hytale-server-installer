@@ -13,7 +13,6 @@ Script de PowerShell automatizado para configurar un servidor de desarrollo loca
 - ✅ Instalación automática de Java 25 (Temurin), Git, Gradle y Chocolatey
 - ✅ Copia automática de archivos del servidor desde tu instalación de Hytale
 - ✅ Genera scripts de inicio y autenticación
-- ✅ Desinstalador incluido para limpiar todo
 
 ## 📋 Requisitos
 
@@ -68,9 +67,7 @@ Copia el código, ve a https://accounts.hytale.com/device e ingresa el código.
 | Archivo | Descripción |
 |---------|-------------|
 | `Instalar-Servidor.bat` | 🟢 **Ejecuta esto para instalar** |
-| `Desinstalar-Servidor.bat` | 🔴 Para desinstalar todo |
 | `HytaleServerSetup.ps1` | Script principal |
-| `HytaleServerUninstall.ps1` | Script de limpieza |
 
 ---
 
@@ -83,8 +80,6 @@ Copia el código, ve a https://accounts.hytale.com/device e ingresa el código.
 # Instalación rápida (sin Git ni Gradle)
 .\HytaleServerSetup.ps1 -SkipOptional
 
-# Desinstalación automática sin preguntas
-.\HytaleServerUninstall.ps1 -Unattended
 ```
 
 ---
