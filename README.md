@@ -29,7 +29,7 @@ O ejecútalo desde la terminal:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; .\HytaleServerSetup.ps1
-
+```
 
 ## 🤝 Cómo Contribuir
 
