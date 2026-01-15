@@ -31,7 +31,7 @@ git clone https://github.com/TU_USUARIO/hytale-server-setup.git
 ### Paso 2: Ejecutar
 **Haz doble clic en `Instalar-Servidor.bat`** y sigue las instrucciones.
 
-> Windows te pedirá permisos 2 veces, dale "Ejecutar" en ambas.
+> Windows te pedirá permisos 2 o 3 veces, dale "Ejecutar" en ambas.
 
 ---
 
