@@ -8,16 +8,6 @@ Script de PowerShell automatizado para configurar un servidor de desarrollo loca
 
 ---
 
-## 🌐 IP del Servidor (¡NO LO OLVIDES!)
-
-```
-localhost:5520
-```
-
-> Cuando te conectes desde Hytale, usa esta dirección exacta.
-
----
-
 ## 🚀 Características
 
 - ✅ Instalación automática de Java 25 (Temurin), Git, Gradle y Chocolatey
