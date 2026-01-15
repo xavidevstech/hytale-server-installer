@@ -1,52 +1,121 @@
 # Hytale Server Setup (Windows 11) 🎮
 
-![Version](https://img.shields.io/badge/version-2.0-blue) ![Platform](https://img.shields.io/badge/platform-Windows_11-win) ![License](https://img.shields.io/badge/license-MIT-green)
+![Version](https://img.shields.io/badge/version-2.1-blue) ![Platform](https://img.shields.io/badge/platform-Windows_11-0078D6) ![License](https://img.shields.io/badge/license-MIT-green)
 
-Un script de PowerShell automatizado para configurar, instalar y lanzar un servidor de desarrollo local de **Hytale** en Windows 11.
+Script de PowerShell automatizado para configurar un servidor de desarrollo local de **Hytale** en Windows 11.
 
-Este proyecto fue presentado en mi canal de YouTube: [**XaviDevs**](https://www.youtube.com/@XaviDevs).
+📺 Video tutorial en mi canal: [**XaviDevs**](https://www.youtube.com/@XaviDevs)
+
+---
+
+## 🌐 IP del Servidor (¡NO LO OLVIDES!)
+
+```
+localhost:5520
+```
+
+> Cuando te conectes desde Hytale, usa esta dirección exacta.
+
+---
 
 ## 🚀 Características
 
-* **Verificación automática:** Comprueba si tienes Java 25 (Temurin), Git y Chocolatey.
-* **Instalación desatendida:** Instala las dependencias necesarias si faltan.
-* **Configuración del entorno:** Copia los archivos `Server` y `Assets` desde tu instalación local de Hytale.
-* **Scripts de utilidad:** Genera automáticamente `start-server.bat` y scripts de autenticación.
+- ✅ Instalación automática de Java 25 (Temurin), Git, Gradle y Chocolatey
+- ✅ Copia automática de archivos del servidor desde tu instalación de Hytale
+- ✅ Genera scripts de inicio y autenticación
+- ✅ Desinstalador incluido para limpiar todo
 
-## 📋 Requisitos Previos
+## 📋 Requisitos
 
-* Windows 10 o 11.
-* PowerShell ejecutado como **Administrador**.
-* Tener acceso a la beta/juego de Hytale instalado localmente.
+- Windows 10 o 11
+- Hytale instalado (para copiar los archivos del servidor)
 
-## 🛠️ Cómo usarlo
+## 🛠️ Instalación (2 pasos)
 
-1.  Descarga el archivo `HytaleServerSetup.ps1`.
-2.  Haz clic derecho en el archivo y selecciona **"Ejecutar con PowerShell"**.
-3.  Sigue las instrucciones en pantalla.
-
-O ejecútalo desde la terminal:
-
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; .\HytaleServerSetup.ps1
+### Paso 1: Descargar
+Descarga todos los archivos o clona el repositorio:
+```bash
+git clone https://github.com/TU_USUARIO/hytale-server-setup.git
 ```
 
-## 🤝 Cómo Contribuir
+### Paso 2: Ejecutar
+**Haz doble clic en `Instalar-Servidor.bat`** y sigue las instrucciones.
 
-¡Las contribuciones son bienvenidas! Este proyecto busca ser la herramienta estándar para la comunidad hispana de Hytale. Si quieres mejorar el código:
+> Windows te pedirá permisos 2 veces, dale "Ejecutar" en ambas.
 
-1.  Haz un **Fork** del proyecto.
-2.  Crea una rama nueva (`git checkout -b feature/NuevaMejora`).
-3.  Haz tus cambios y confirma (`git commit -m 'Mejora: Agregado soporte para X'`).
-4.  Haz Push (`git push origin feature/NuevaMejora`).
-5.  Abre un **Pull Request**.
+---
 
-## ⚖️ Aviso Legal (Disclaimer)
+## 🎮 Después de Instalar
 
-Este proyecto es una herramienta no oficial desarrollada por la comunidad y **no está afiliada, respaldada ni asociada de ninguna manera con Hypixel Studios ni con Riot Games**.
+### 1. Iniciar el servidor
+Ve a `C:\HytaleServer` y ejecuta `start-server.bat`
 
-Hytale™ es una marca registrada de Hypixel Studios.
+### 2. Autenticar (solo la primera vez)
+```
+/auth login device
+```
+Copia el código, ve a https://accounts.hytale.com/device e ingresa el código.
+
+### 3. Conectarte desde Hytale
+
+| Campo | Valor |
+|-------|-------|
+| **Dirección** | `localhost:5520` |
+| **Puerto** | `5520` (ya incluido) |
+
+### 4. Comandos útiles en el juego
+| Comando | Descripción |
+|---------|-------------|
+| `/gamemode creative` | Modo creativo |
+| `/gamemode survival` | Modo supervivencia |
+| `/tp 0 100 0` | Teletransporte |
+| `/stop` | Detener servidor |
+
+---
+
+## 📁 Archivos del Proyecto
+
+| Archivo | Descripción |
+|---------|-------------|
+| `Instalar-Servidor.bat` | 🟢 **Ejecuta esto para instalar** |
+| `Desinstalar-Servidor.bat` | 🔴 Para desinstalar todo |
+| `HytaleServerSetup.ps1` | Script principal |
+| `HytaleServerUninstall.ps1` | Script de limpieza |
+
+---
+
+## ⚙️ Opciones Avanzadas (Opcional)
+
+```powershell
+# Instalación con más RAM (si tienes 16GB+)
+.\HytaleServerSetup.ps1 -MinRAM 8 -MaxRAM 8
+
+# Instalación rápida (sin Git ni Gradle)
+.\HytaleServerSetup.ps1 -SkipOptional
+
+# Desinstalación automática sin preguntas
+.\HytaleServerUninstall.ps1 -Unattended
+```
+
+---
+
+## 🤝 Contribuir
+
+1. Haz un **Fork** del proyecto
+2. Crea una rama (`git checkout -b feature/MiMejora`)
+3. Commit (`git commit -m 'Agregado: nueva función'`)
+4. Push (`git push origin feature/MiMejora`)
+5. Abre un **Pull Request**
+
+## ⚖️ Aviso Legal
+
+Este proyecto **no está afiliado con Hypixel Studios ni Riot Games**.
+Hytale™ es marca registrada de Hypixel Studios.
 
 ## 📄 Licencia
 
-Este proyecto se distribuye bajo la licencia **MIT**. Eres libre de usarlo, modificarlo y distribuirlo, siempre que mantengas la atribución al autor original.
+MIT License - Libre para usar, modificar y distribuir.
+
+---
+
+Creado con ❤️ por [XavierDevs](https://www.youtube.com/@XaviDevs)
