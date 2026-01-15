@@ -29,3 +29,24 @@ O ejecútalo desde la terminal:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; .\HytaleServerSetup.ps1
+
+
+## 🤝 Cómo Contribuir
+
+¡Las contribuciones son bienvenidas! Este proyecto busca ser la herramienta estándar para la comunidad hispana de Hytale. Si quieres mejorar el código:
+
+1.  Haz un **Fork** del proyecto.
+2.  Crea una rama nueva (`git checkout -b feature/NuevaMejora`).
+3.  Haz tus cambios y confirma (`git commit -m 'Mejora: Agregado soporte para X'`).
+4.  Haz Push (`git push origin feature/NuevaMejora`).
+5.  Abre un **Pull Request**.
+
+## ⚖️ Aviso Legal (Disclaimer)
+
+Este proyecto es una herramienta no oficial desarrollada por la comunidad y **no está afiliada, respaldada ni asociada de ninguna manera con Hypixel Studios ni con Riot Games**.
+
+Hytale™ es una marca registrada de Hypixel Studios.
+
+## 📄 Licencia
+
+Este proyecto se distribuye bajo la licencia **MIT**. Eres libre de usarlo, modificarlo y distribuirlo, siempre que mantengas la atribución al autor original.
